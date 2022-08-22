@@ -4,10 +4,10 @@ The application shows the closest restaurants based on the user's location. Plea
 
 Built with
 
-* ReactJs
-* Bootstrap5
-* [KerzzPOSAPI](https://smarty.kerzz.com:4004/help/static/index.html)
-* Packages : haversine, infinite-scroll
+- ReactJs
+- Bootstrap5
+- [KerzzPOSAPI](https://smarty.kerzz.com:4004/help/static/index.html)
+- Packages : haversine, infinite-scroll
 
 ## Screen shots
 
@@ -16,12 +16,6 @@ Built with
 ![2](https://user-images.githubusercontent.com/25987727/185847919-fab6ce57-f3be-448b-bd27-0a236ef11803.png)
 
 ![3](https://user-images.githubusercontent.com/25987727/185847922-74dc820a-e889-4928-8c56-2aeb6ed8cd14.png)
-
-
-
-
-
-
 
 ## Getting Started with Create React App
 
