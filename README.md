@@ -1,3 +1,15 @@
+# Description
+
+The application shows the closest restaurants based on the user's location. Please turn on location.
+
+## Screen shots
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
