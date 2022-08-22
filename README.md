@@ -7,6 +7,7 @@ Built with
 * ReactJs
 * Bootstrap5
 * [KerzzPOSAPI](https://smarty.kerzz.com:4004/help/static/index.html)
+* Packages : haversine, infinite-scroll
 
 ## Screen shots
 
