@@ -2,15 +2,27 @@
 
 The application shows the closest restaurants based on the user's location. Please turn on location.
 
+Built with
+
+* ReactJs
+* Bootstrap5
+* [KerzzPOSAPI](https://smarty.kerzz.com:4004/help/static/index.html)
+
 ## Screen shots
 
+![1](https://user-images.githubusercontent.com/25987727/185847914-fc8a6e50-e285-40ac-81f5-8651ef185b66.png)
+
+![2](https://user-images.githubusercontent.com/25987727/185847919-fab6ce57-f3be-448b-bd27-0a236ef11803.png)
+
+![3](https://user-images.githubusercontent.com/25987727/185847922-74dc820a-e889-4928-8c56-2aeb6ed8cd14.png)
 
 
 
 
 
 
-# Getting Started with Create React App
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
