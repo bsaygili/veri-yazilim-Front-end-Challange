@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import RestCard from "../components/RestCard";
-import SearchBar from "../components/SearchBar";
 import LoaderSpinner from "../components/LoaderSpinner";
 import { FetchRestaurants } from "../API/fetchRestaurants";
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -23,6 +22,9 @@ function Restaurants() {
         },
         (err) => {
           console.log("Geolocaiton Error Msg:", err.message);
+          alert(
+            "Konum bilgisine erişilemedi. Konuma izin verip, sayfayı yenileyiniz."
+          );
         }
       );
     };
@@ -53,11 +55,12 @@ function Restaurants() {
   };
 
   return (
-    <div className="container">
-      <SearchBar />
-
+    <>
+      <h4 className="text-center" style={{ fontSize: 14 }}>
+        Sonuçlar
+      </h4>
       <InfiniteScroll
-        className="d-flex flex-column p-4 align-items-center"
+        className="d-flex flex-column align-items-center"
         dataLength={limit} //This is important field to render the next data
         next={fetchData}
         hasMore={hasMore}
@@ -75,7 +78,7 @@ function Restaurants() {
           );
         })}
       </InfiniteScroll>
-    </div>
+    </>
   );
 }
 
