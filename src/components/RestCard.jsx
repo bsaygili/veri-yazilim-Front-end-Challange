@@ -4,18 +4,29 @@ import bucket from "../assets/shopping_basket-24px.png";
 import haversine from "haversine";
 
 function RestCard({ restaurant, latitude, longitude }) {
+  console.log("restaurant", restaurant);
   return (
     <div className="d-flex justfy-content-between align-items-center flex-wrap">
       <div
         className="shadow m-4 bg-body rounded-3 position-relative"
         style={{ width: 343, height: 260 }}
       >
-        <img
-          style={{ maxWidth: 343, height: 150 }}
-          src={restaurant.images[0].base64}
-          className="card-img-top rounded-3"
-          alt={restaurant.images[0].itemId}
-        />
+        {restaurant.images.length === 0 ? (
+          <div
+            style={{ maxWidth: 343, height: 150 }}
+            className="card-img-top rounded-3 bg-danger text-white text-center p-4"
+          >
+            Images not Found
+          </div>
+        ) : (
+          <img
+            style={{ maxWidth: 343, height: 150 }}
+            src={restaurant.images[0].base64}
+            className="card-img-top rounded-3"
+            alt={restaurant.images[0].itemId}
+          />
+        )}
+
         <span
           className="rounded badge position-absolute d-flex align-items-center"
           style={{
@@ -38,6 +49,7 @@ function RestCard({ restaurant, latitude, longitude }) {
           <h5
             className="card-title"
             style={{
+              background: "red",
               fontSize: 18,
               marginTop: "1rem",
               height: "3rem",

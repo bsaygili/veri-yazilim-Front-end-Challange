@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RestCard from "../components/RestCard";
 import LoaderSpinner from "../components/LoaderSpinner";
 import { fetchRes } from "../API/fetchRestaurants";
-import { getGeoLocation } from "../actions/actions";
+import { getGeoLocation } from "../helper/getGeoLocation";
 import InfiniteScroll from "react-infinite-scroll-component";
 import EndMessage from "../components/EndMessage";
 import NotFound from "./NotFound";
@@ -25,8 +25,9 @@ function Restaurants() {
   const fetchData = async () => {
     setSkip((prev) => prev + 3);
     setLimit((prev) => prev + 7);
-
-    setHasMore(false);
+    if (restaurants.length === 0 && restaurants.length < 20) {
+      setHasMore(false);
+    }
   };
 
   return (
