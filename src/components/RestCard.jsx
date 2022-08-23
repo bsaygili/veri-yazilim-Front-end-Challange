@@ -4,7 +4,6 @@ import bucket from "../assets/shopping_basket-24px.png";
 import haversine from "haversine";
 
 function RestCard({ restaurant, latitude, longitude }) {
-  console.log("restaurant", restaurant);
   return (
     <div className="d-flex justfy-content-between align-items-center flex-wrap">
       <div
