@@ -7,13 +7,13 @@ function RestCard({ restaurant, latitude, longitude }) {
   return (
     <div className="d-flex justfy-content-between align-items-center flex-wrap">
       <div
-        className="card shadow m-4 bg-body rounded"
-        style={{ width: 343, minHeight: 260 }}
+        className="shadow m-4 bg-body rounded-3 position-relative"
+        style={{ width: 343, height: 260 }}
       >
         <img
-          style={{ maxWidth: 341, height: 150 }}
+          style={{ maxWidth: 343, height: 150 }}
           src={restaurant.images[0].base64}
-          className="card-img-top"
+          className="card-img-top rounded-3"
           alt={restaurant.images[0].itemId}
         />
         <span
@@ -34,24 +34,23 @@ function RestCard({ restaurant, latitude, longitude }) {
           {restaurant.storeInfo.rate.toFixed(1)}
         </span>
 
-        <div className="card-body">
+        <div className="card-body px-2">
           <h5
             className="card-title"
             style={{
               fontSize: 18,
+              marginTop: "1rem",
+              height: "3rem",
               color: "rgba(26, 24, 36, 1)",
             }}
           >
             {restaurant.title}{" "}
           </h5>
-          <div className="d-flex justify-content-between fw-bolder fs-6">
-            <div
-              className="text-secondary"
-              style={{ fontSize: 12, color: "rgba(26, 24, 36, .5)" }}
-            >
+          <div className="d-flex justify-content-between mb-2">
+            <div style={{ fontSize: 12, color: "rgba(26, 24, 36, .5)" }}>
               Coffee,Tatlı
             </div>
-            <div className="text-secondary">
+            <div>
               <img
                 className="mx-1"
                 src={bucket}
@@ -62,8 +61,8 @@ function RestCard({ restaurant, latitude, longitude }) {
               </span>
             </div>
           </div>
-          <div className="d-flex justify-content-between  mt-1 fw-bolder fs-6">
-            <div className="text-dark fs-6">
+          <div className="d-flex justify-content-between">
+            <div>
               <span
                 className="mx-1"
                 style={{ fontSize: 12, color: "rgba(26, 24, 36, 1)" }}
