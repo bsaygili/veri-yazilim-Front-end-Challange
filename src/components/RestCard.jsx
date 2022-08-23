@@ -49,7 +49,6 @@ function RestCard({ restaurant, latitude, longitude }) {
           <h5
             className="card-title"
             style={{
-              background: "red",
               fontSize: 18,
               marginTop: "1rem",
               height: "3rem",
