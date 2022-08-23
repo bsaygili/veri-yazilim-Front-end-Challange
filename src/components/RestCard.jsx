@@ -91,30 +91,41 @@ function RestCard({ restaurant, latitude, longitude }) {
               </span>
             </div>
             <div className="text-secondary">
-              {restaurant.storeInfo.workingHours[0].closed ? (
+              {restaurant.storeInfo.workingHours.length === 0 ? (
                 <p
                   className="d-inline-block text-danger"
                   style={{ fontSize: 12 }}
                 >
-                  İşletme Kapalı
+                  Çalışma saati bilgisi yok.
                 </p>
               ) : (
-                <p
-                  className="d-inline-block"
-                  style={{ fontSize: 12, color: "#34C47C" }}
-                >
-                  İşletme Açık
-                </p>
-              )}
+                <>
+                  {restaurant.storeInfo.workingHours[0].closed ? (
+                    <p
+                      className="d-inline-block text-danger"
+                      style={{ fontSize: 12 }}
+                    >
+                      İşletme Kapalı
+                    </p>
+                  ) : (
+                    <p
+                      className="d-inline-block"
+                      style={{ fontSize: 12, color: "#34C47C" }}
+                    >
+                      İşletme Açık
+                    </p>
+                  )}
 
-              <span> </span>
-              <p
-                className="d-inline-block text-secondary"
-                style={{ fontSize: 12, color: "rgba(26, 24, 36, 0.5)" }}
-              >
-                {restaurant.storeInfo.workingHours[0].open} /{" "}
-                {restaurant.storeInfo.workingHours[0].close}
-              </p>
+                  <span> </span>
+                  <p
+                    className="d-inline-block text-secondary"
+                    style={{ fontSize: 12, color: "rgba(26, 24, 36, 0.5)" }}
+                  >
+                    {restaurant.storeInfo.workingHours[0].open} /{" "}
+                    {restaurant.storeInfo.workingHours[0].close}
+                  </p>
+                </>
+              )}
             </div>
           </div>
         </div>
