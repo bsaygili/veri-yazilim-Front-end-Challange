@@ -8,6 +8,7 @@ Built with
 - Bootstrap5
 - [KerzzPOSAPI](https://smarty.kerzz.com:4004/help/static/index.html)
 - Packages : haversine, infinite-scroll
+- Demo: https://restaurant-app-veri-yazilim.web.app/
 
 ## Screen shots
 
